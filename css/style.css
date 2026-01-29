@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Sans+3:wght@200..900&display=swap');
+
+:root {
+    --deep-olive: #3d4a3e;
+    --antique-gold: #c5a059;
+    --soft-cream: #f9f7f2;
+    --charcoal: #2a2a2a;
+    --border-soft: #e0ddd5;
+}
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: #f2f0eb;
+    background-image: url("https://www.transparenttextures.com/patterns/cream-paper.png");
+    color: var(--charcoal);
+    margin: 0;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+/* Compact, hand-crafted header */
+header {
+    background: var(--deep-olive);
+    padding: 35px 0;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px double var(--antique-gold);
+}
+
+/* header::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 80%);
+} */
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    color: var(--soft-cream);
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-align: center;
+}
+
+header p {
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--antique-gold);
+    text-align: center;
+    margin: 5px 0 0 0;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 300;
+}
+
+main {
+    padding: 40px 0;
+}
+
+section {
+    background: white;
+    margin-bottom: 30px;
+    padding: 35px;
+    border: 1px solid var(--border-soft);
+    position: relative;
+}
+
+/* Ornate header style */
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: var(--deep-olive);
+    margin-top: 0;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--antique-gold);
+}
+
+/* Custom list for editors - 2 columns */
+.editors-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 40px;
+    padding: 0;
+    list-style: none;
+    margin-bottom: 25px;
+}
+
+.editors-list li {
+    border-left: 2px solid var(--antique-gold);
+    padding-left: 15px;
+    margin: 0;
+}
+
+.editors-cta {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.05rem;
+    color: var(--deep-olive);
+    border-top: 1px solid var(--border-soft);
+    padding-top: 15px;
+    margin-top: 20px;
+}
+
+/* Download box with unique aesthetic */
+.download-box {
+    border: 1px solid var(--border-soft);
+    background: var(--soft-cream);
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.btn-download {
+    background: var(--deep-olive);
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+    border: 1px solid var(--deep-olive);
+}
+
+.btn-download:hover {
+    background: transparent;
+    color: var(--deep-olive);
+}
+
+/* Archive links */
+.archive-list {
+    padding: 0;
+    list-style: none;
+}
+
+.archive-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0efeb;
+}
+
+.archive-list a {
+    color: var(--deep-olive);
+    text-decoration: none;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 1.1rem;
+}
+
+.archive-list a:hover {
+    color: var(--antique-gold);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.85rem;
+    color: #777;
+    border-top: 1px solid var(--border-soft);
+}
+
+@media (max-width: 650px) {
+    .download-box { flex-direction: column; text-align: center; }
+    .editors-list { grid-template-columns: 1fr; }
+}

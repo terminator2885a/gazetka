@@ -1,0 +1,187 @@
+/* Universal input + textarea styling */
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"],
+input[type="reset"],
+textarea {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1rem;
+    padding: 10px 14px;
+    border: 1px solid var(--border-soft);
+    border-radius: 6px;
+    background: var(--soft-cream);
+    color: var(--charcoal);
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+}
+
+/* Inputs inside header should not stretch full width */
+header input {
+    width: auto;
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 20px;
+}
+
+/* Logout link in header */
+header a {
+    font-family: 'Source Sans 3', sans-serif;
+    color: var(--soft-cream);
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 14px;
+    border: 1px solid var(--antique-gold);
+    border-radius: 4px;
+    background: rgba(255,255,255,0.05);
+    transition: all 0.25s ease;
+    float: right;
+    margin-top: 10px;
+}
+
+header a:hover {
+    background: var(--antique-gold);
+    color: var(--deep-olive);
+    border-color: var(--antique-gold);
+}
+
+
+/* Textarea */
+textarea {
+    min-height: 160px;
+    resize: vertical;
+    line-height: 1.6;
+}
+
+/* Focus effect */
+input:focus,
+textarea:focus {
+    border-color: var(--antique-gold);
+    background: #fffdf8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.25);
+}
+
+/* Submit button */
+input[type="submit"], input[type="reset"] {
+    background: var(--deep-olive);
+    color: var(--soft-cream);
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--deep-olive);
+    width: auto;
+    padding: 10px 22px;
+}
+
+input[type="reset"]{
+    color: var(--deep-olive);
+    background: var(--soft-cream);
+}
+
+input[type="submit"]:hover {
+    background: transparent;
+    color: var(--deep-olive);
+}
+
+input[type="reset"]:hover {
+    background: var(--deep-olive);
+    color: var(--soft-cream);
+}
+
+/* Inputs inside footer */
+footer input {
+    max-width: 850px;
+    margin-top: 15px;
+}
+
+a{
+    color: var(--deep-olive);
+}
+
+.form-btns{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.remove{
+    color: red;
+}
+
+select { font-family: 'Source Sans 3', sans-serif; font-size: 1rem; padding: 10px 14px; border: 1px solid var(--border-soft); border-radius: 6px; background: var(--soft-cream); color: var(--charcoal); width: 100%; box-sizing: border-box; appearance: none; /* removes default arrow */ background-image: linear-gradient(45deg, transparent 50%, var(--antique-gold) 50%), linear-gradient(135deg, var(--antique-gold) 50%, transparent 50%), linear-gradient(to right, var(--soft-cream), var(--soft-cream)); background-position: calc(100% - 18px) calc(50% - 4px), calc(100% - 13px) calc(50% - 4px), 100% 0; background-size: 5px 5px, 5px 5px, 2.5em 100%; background-repeat: no-repeat; transition: all 0.25s ease; } /* Focus effect */ select:focus { border-color: var(--antique-gold); background-color: #fffdf8; outline: none; box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.25); }
+
+/* Number input styled like text inputs */
+input[type="number"] {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1rem;
+    padding: 10px 14px;
+    border: 1px solid var(--border-soft);
+    border-radius: 6px;
+    background: var(--soft-cream);
+    color: var(--charcoal);
+    width: 100%;
+    box-sizing: border-box;
+    transition: all 0.25s ease;
+}
+
+/* Focus effect */
+input[type="number"]:focus {
+    border-color: var(--antique-gold);
+    background: #fffdf8;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.25);
+}
+
+/* Remove default spinners (Chrome, Edge, Safari) */
+/* input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+} */
+
+/* File input styled like other inputs */
+input[type="file"] {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1rem;
+    padding: 10px 14px;
+    border: 1px solid var(--border-soft);
+    border-radius: 6px;
+    background: var(--soft-cream);
+    color: var(--charcoal);
+    width: 100%;
+    box-sizing: border-box;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+/* Remove ugly default button (Chrome/Edge/Safari) */
+input[type="file"]::-webkit-file-upload-button {
+    visibility: hidden;
+}
+
+/* Custom upload button */
+input[type="file"]::before {
+    content: "Wybierz plik";
+    display: inline-block;
+    background: var(--deep-olive);
+    color: var(--soft-cream);
+    padding: 8px 16px;
+    border-radius: 4px;
+    border: 1px solid var(--deep-olive);
+    font-weight: 600;
+    margin-right: 12px;
+    transition: all 0.25s ease;
+}
+
+/* Hover effect */
+input[type="file"]:hover::before {
+    background: transparent;
+    color: var(--deep-olive);
+}
+
+/* Focus glow */
+input[type="file"]:focus {
+    outline: none;
+    border-color: var(--antique-gold);
+    box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.25);
+}
