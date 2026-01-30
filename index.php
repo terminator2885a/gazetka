@@ -3,7 +3,7 @@
     try{
         $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
     }catch(Exception $e){
-        echo $e->getMessage();
+        header('Location: ./error/');
     }
 
     $content =  $conn->query('SELECT * FROM content')
